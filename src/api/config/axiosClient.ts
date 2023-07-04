@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const getEnvVariable = (envVariableName?: string): string => {
+/* const getEnvVariable = (envVariableName?: string): string => {
     const envVariable = process.env[`REACT_APP_URL_${envVariableName}`];
     if (envVariable) {
         return envVariable;
@@ -9,10 +9,10 @@ const getEnvVariable = (envVariableName?: string): string => {
     }
 }
 
-const BASE_URL = getEnvVariable(process.env.REACT_APP_ENV);
+const BASE_URL = getEnvVariable(process.env.REACT_APP_ENV); */
 
 const axiosClient = axios.create({
-    baseURL: BASE_URL,
+    baseURL: "https://dashboards-be-docker.onrender.com/",
     headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
