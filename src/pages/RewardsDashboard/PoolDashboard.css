@@ -1,0 +1,53 @@
+.recharts-cartesian-grid-horizontal,
+.recharts-cartesian-grid-vertical {
+  display: none;
+}
+
+.recharts-cartesian-grid-bg {
+  opacity: 0.1;
+}
+
+.stake-fill {
+  fill: url(#stake-gradient) #fff;
+}
+
+.stake-gradient {
+  --color-stop: #f12c06;
+  --color-bot: #faed34;
+}
+
+svg.recharts-surface {
+  width: 124%;
+  height: 100%;
+  position: relative;
+  bottom: 40px;
+}
+
+h4.ant-typography.white-text.css-dev-only-do-not-override-1ufar9v {
+  width: 124%;
+  position: relative;
+  bottom: 15px;
+  line-height: 0.8;
+}
+
+p {
+  margin-bottom: 1em;
+  position: relative;
+  bottom: 10px;
+}
+
+@media screen and (max-width: 770px) {
+  svg.recharts-surface {
+    width: 115%;
+  }
+  h4.ant-typography.white-text.css-dev-only-do-not-override-1ufar9v {
+    width: 115%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  svg.recharts-surface {
+    width: 95%;
+    height: 100%;
+  }
+}

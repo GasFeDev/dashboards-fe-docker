@@ -1,0 +1,11 @@
+
+
+.image-divider {
+    background-image: url("../../assets/maya-background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 90%;
+    height: 50px;
+    margin: auto;
+}

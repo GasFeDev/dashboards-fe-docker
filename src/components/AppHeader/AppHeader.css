@@ -1,0 +1,109 @@
+.ant-layout-header {
+  background: transparent;
+  color: white;
+  min-height: 100px;
+  border-bottom: solid 1px #571254;
+  padding-top: 6px;
+}
+
+.main-logo {
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+  max-width: 160px;
+  float: left;
+}
+
+.ant-menu-title-content {
+  font-family: "Bai Jamjuree";
+}
+
+.ant-menu,
+.ant-menu-root {
+  background-color: transparent;
+  background: transparent;
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+  min-width: 132px;
+}
+
+.col-aligment {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+/* .ant-menu-light.ant-menu-horizontal>.ant-menu-item-selected::after {
+    border-bottom-color: #fb00b7;
+} */
+
+.ant-menu-light.ant-menu-horizontal > .ant-menu-item-selected {
+  color: #fff;
+}
+
+:where(.css-dev-only-do-not-override-1ufar9v).ant-menu-light.ant-menu-horizontal
+  > .ant-menu-item-selected::after,
+:where(.css-dev-only-do-not-override-1ufar9v).ant-menu-light
+  > .ant-menu.ant-menu-horizontal
+  > .ant-menu-item-selected::after,
+:where(.css-dev-only-do-not-override-1ufar9v).ant-menu-light.ant-menu-horizontal
+  > .ant-menu-submenu-selected::after,
+:where(.css-dev-only-do-not-override-1ufar9v).ant-menu-light
+  > .ant-menu.ant-menu-horizontal
+  > .ant-menu-submenu-selected::after {
+  display: none;
+}
+
+.ant-menu-item:hover > .ant-menu-title-content,
+.ant-menu-item-active:hover > .ant-menu-title-content {
+  color: #fb00b7;
+}
+
+.ant-menu-light .ant-menu-submenu-selected > .ant-menu-submenu-title {
+  color: #fb00b7;
+}
+
+.ant-menu-title-content:hover {
+  color: #fb00b7;
+}
+
+.expanded-menu {
+  text-align: right;
+}
+
+.ant-menu-light {
+  background: transparent;
+}
+
+.ant-menu .ant-menu-submenu-title .anticon {
+  font-size: 25px;
+}
+
+.ant-menu-light.ant-menu-horizontal > .ant-menu-submenu-selected {
+  margin-top: 12px;
+}
+
+.ant-menu-light
+  .ant-menu-submenu-title:hover:not(.ant-menu-item-selected):not(
+    .ant-menu-submenu-selected
+  ) {
+  color: #fb00b7;
+}
+
+/* BREAK  POINGS */
+
+@media screen and (max-width: 500px) {
+  .ant-layout-header {
+    padding: 10px;
+  }
+}
+
+/* BREAK  POINGS */
+
+@media screen and (max-width: 400px) {
+  .ant-menu,
+  .ant-menu-root {
+    min-width: 10px;
+  }
+}

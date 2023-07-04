@@ -1,0 +1,180 @@
+.data-table {
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.ant-table {
+    border: solid 2px #851a80;
+    border-radius: 8px 8px 8px 8px;
+    font-family: "Bai Jamjuree";
+}
+
+.ant-table-cell {
+    font-family: "Bai Jamjuree";
+}
+
+.ant-empty-description {
+    font-family: "Bai Jamjuree";
+}
+
+.ant-table-content {
+    padding-right: 4px;
+    background: #851a80;
+}
+
+.ant-table-title {
+    background-color: #851a80;
+    border-radius: 0px;
+}
+
+.ant-table-wrapper .ant-table-footer {
+    padding: 2px;
+    background: #851a80;
+    border-radius: 0px;
+}
+
+.ant-table-wrapper .ant-table .ant-table-title {
+    border-radius: 0px;
+}
+
+.ant-table-wrapper .ant-table-thead>tr>th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+    background-color: transparent;
+}
+
+.ant-table-thead>tr>th {
+    background: #0a0020;
+    background-color: #0a0020;
+}
+
+.ant-table-wrapper .ant-table-tbody>tr>td {
+    border-bottom: 0px;
+}
+
+.ant-table-cell {
+    color: #fff;
+    background-color: #0a0020;
+    border: solid 4px #851a80;
+    border-inline-end: 0px;
+    border-bottom: 0px;
+}
+
+.ant-table-wrapper .ant-table-thead>tr>th {
+    background: #0a0020;
+    border-bottom: 0px;
+    color: #fff;
+}
+
+.ant-table.ant-table-bordered>.ant-table-container>.ant-table-summary>table>tfoot>tr>td {
+    border-inline-end: 0px solid #f0f0f0;
+}
+
+.ant-table-wrapper .ant-table-tbody>tr.ant-table-row:hover>td {
+    background-color: rgba(75, 8, 71, 0.938);
+}
+
+
+td.ant-table-cell.ant-table-cell-row-hover {
+    background-color: rgba(75, 8, 71, 0.938);
+}
+
+
+.search-input {
+    border-radius: #0a0020;
+    border-color: #0a0020;
+    background-color: #0a0020;
+    color: #fff;
+    max-width: 600px;
+}
+
+.search-input>input {
+    border-radius: #0a0020;
+    border-color: #0a0020;
+    background-color: #0a0020;
+    color: #fff;
+}
+
+
+.ant-input-group-addon button {
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    background-color: #0a0020;
+    color: #fff;
+}
+
+/*Navigation*/
+
+
+
+.ant-pagination>.ant-pagination-item {
+    background-color: #851a80;
+    color: #fff;
+}
+
+.ant-pagination>.ant-pagination-item-active {
+    background-color: #fff;
+    color: #851a80;
+}
+
+.ant-pagination>.ant-pagination-item-active li a {
+    color: #851a80;
+}
+
+.ant-pagination .ant-pagination-item:not(.ant-pagination-item-active):hover {
+    background-color: #fff;
+    color: #851a80;
+    border-color: #fb00b7;
+}
+
+.ant-pagination .ant-pagination-jump-next .ant-pagination-item-container .ant-pagination-item-ellipsis,
+.ant-pagination-jump-prev .ant-pagination-item-container .ant-pagination-item-ellipsis {
+    color: #851a80;
+}
+
+.ant-pagination .ant-pagination-next .ant-pagination-item-link,
+.ant-pagination .ant-pagination-prev .ant-pagination-item-link {
+    background-color: #851a80;
+    color: #fff;
+}
+
+.ant-pagination .ant-pagination-next .ant-pagination-item-link:hover,
+.ant-pagination .ant-pagination-prev .ant-pagination-item-link:hover {
+    background-color: #fff;
+    color: #851a80;
+    border-color: #fb00b7;
+}
+
+
+.ant-table-wrapper .ant-table-filter-trigger {
+    color: #fff;
+}
+
+.ant-table-wrapper .ant-table-filter-trigger:hover {
+    color: #fb00b7;
+}
+
+.ant-input::placeholder {
+    color: #fff;
+    font-size: 0.85rem;
+}
+
+.ant-input::-moz-placeholder {
+    color: #fff;
+    font-size: 0.85rem;
+}
+
+.ant-input::-webkit-input-placeholder {
+    color: #fff;
+    font-size: 0.85rem;
+}
+
+@media screen and (max-width: 700px) {
+    .ant-table-cell {
+        font-size: 0.6rem;
+    }
+
+    .graph-tables-row {
+        margin-top: 8rem;
+    }
+}
