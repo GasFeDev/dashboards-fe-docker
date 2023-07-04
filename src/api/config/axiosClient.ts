@@ -12,7 +12,11 @@ import axios from 'axios';
 const BASE_URL = getEnvVariable(process.env.REACT_APP_ENV); */
 
 const axiosClient = axios.create({
+    // En produccion
     baseURL: "https://dashboards-be-docker.onrender.com/",
+
+    //En local
+    /* baseURL: BASE_URL, */
     headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
