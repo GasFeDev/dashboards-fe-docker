@@ -24,5 +24,16 @@ const axiosClient = axios.create({
     timeout: 10000
 });
 
+axiosClient.interceptors.response.use(
+    response => {
+      // Agregar encabezado 'Access-Control-Allow-Origin' a la respuesta
+      response.headers['Access-Control-Allow-Origin'] = 'https://dashboards-fe-docker.onrender.com';
+      return response;
+    },
+    error => {
+      return Promise.reject(error);
+    }
+  );
+
 
 export { axiosClient }
