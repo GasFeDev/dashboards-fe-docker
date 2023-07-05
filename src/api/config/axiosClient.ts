@@ -1,7 +1,4 @@
 import axios from 'axios';
-import * as dotenv from "dotenv";
-
-dotenv.config();
 
 /* const getEnvVariable = (envVariableName?: string): string => {
     const envVariable = process.env[`REACT_APP_URL_${envVariableName}`];
@@ -13,6 +10,7 @@ dotenv.config();
 }
 
 const BASE_URL = getEnvVariable(process.env.REACT_APP_ENV); */
+
 
 const axiosClient = axios.create({
     // En produccion
@@ -27,8 +25,6 @@ const axiosClient = axios.create({
     timeout: 10000
 });
 
-
-// En produccion
 axiosClient.interceptors.response.use(
     response => {
       // Agregar encabezado 'Access-Control-Allow-Origin' a la respuesta
