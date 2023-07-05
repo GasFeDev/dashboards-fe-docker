@@ -42,8 +42,8 @@ export { axiosClient } */
 
 import axios from 'axios';
 
-const baseURL = process.env.URL_APP_ENV_PROD
-const accessControlOrigin = process.env.RENDER_APP_ENV_PROD
+const baseURL = process.env.URL_APP_ENV_PROD || "https://dashboards-be-docker.onrender.com/";
+const accessControlOrigin = process.env.RENDER_APP_ENV_PROD || 'https://dashboards-fe-docker.onrender.com';
 
 const axiosClient = axios.create({
   baseURL,
