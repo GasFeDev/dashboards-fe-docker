@@ -28,7 +28,7 @@ export const rewardsColumns: ColumnsType<RewardsDataType> = [
         key: "liveStaked",
     },
     {
-        title: "DEGA ACCUMULATED REWARD",
+        title: "ACCUMULATED REWARD",
         dataIndex: "totalReward",
         key: "totalReward",
     },
@@ -51,7 +51,7 @@ export const rewardsPoolsColumns: ColumnsType<RewardsDataType> = [
         key: "staked",
     },
     {
-        title: "DEGA ACCUMULATED REWARD",
+        title: "ACCUMULATED REWARD",
         dataIndex: "totalRewardInDega",
         key: "totalRewardInDega",
     },
