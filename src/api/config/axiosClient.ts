@@ -42,8 +42,8 @@ export { axiosClient } */
 
 import axios from 'axios';
 
-const baseURL = process.env.URL_APP_ENV_PROD || "https://dashboards-be-docker.onrender.com/";
-const accessControlOrigin = process.env.RENDER_APP_ENV_PROD || 'https://dashboards-fe-docker.onrender.com';
+const baseURL = process.env.URL_APP_ENV_PROD
+const accessControlOrigin = process.env.RENDER_APP_ENV_PROD
 
 const axiosClient = axios.create({
   baseURL,
@@ -52,7 +52,7 @@ const axiosClient = axios.create({
     'Accept': 'application/json',
     'Access-Control-Allow-Origin': accessControlOrigin
   },
-  timeout: 10000
+  timeout: 30000
 });
 
 axiosClient.interceptors.response.use(
