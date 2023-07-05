@@ -1,7 +1,7 @@
 export const MENU = [
     {
         label: "Intructions",
-        link: "https://www.dega.org/ispo"
+        link: "https://dashboards-fe-docker.onrender.com"
     },
     /*{
         label: "Rewards",

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Layout, Col, Row, Menu, MenuProps } from "antd";
 import { MENU } from "../../constants";
-import LOGO from "../../assets/DEGA_LOGO.png";
 
 import "./AppHeader.css";
 
@@ -26,9 +25,6 @@ export const AppHeader = ({ ...props }) => {
     <Header style={{ top: 0, zIndex: 1, width: "100%" }}>
       <Row justify="center" align="middle">
         <Col xs={12} sm={12} md={12} lg={12} xl={12}>
-          <a href="https://www.dega.org/" target="_blank" rel="noreferrer">
-            <img src={LOGO} alt="DEGA_LOGO" className="main-logo " />
-          </a>
         </Col>
         <Col className="col-aligment" xs={12} sm={12} md={12} lg={12} xl={12}>
           <Menu
@@ -40,7 +36,7 @@ export const AppHeader = ({ ...props }) => {
               return (
                 <Menu.Item key={`${item?.key}_${index}`} onClick={onClickMenu}>
                   <a
-                    href="https://www.dega.org/ispo"
+                    href="https://dashboards-fe-docker.onrender.com"
                     target="_blank"
                     rel="noreferrer"
                   >

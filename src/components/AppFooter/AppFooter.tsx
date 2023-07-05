@@ -12,7 +12,7 @@ export const AppFooter = ({ ...props }) => {
         </Row>
         <Row>
           <Col xs={24} sm={24} md={12} lg={24} xl={24} flex="none">
-            <span className="copyright">Copyright © 2023 DEGA</span>
+            <span className="copyright">Copyright © 2023</span>
           </Col>
         </Row>
       </Footer>

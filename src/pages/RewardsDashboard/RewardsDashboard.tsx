@@ -138,7 +138,7 @@ export const RewardsDashboard = () => {
             Rewards Dashboard
           </Typography.Title>
           <Typography.Paragraph className="white-text">
-            Track your DEGA Token rewards per address.
+            Track your Token rewards per address.
           </Typography.Paragraph>
         </Col>
       </Row>
