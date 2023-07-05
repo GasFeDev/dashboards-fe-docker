@@ -1,4 +1,7 @@
 import axios from 'axios';
+import * as dotenv from "dotenv";
+
+dotenv.config();
 
 /* const getEnvVariable = (envVariableName?: string): string => {
     const envVariable = process.env[`REACT_APP_URL_${envVariableName}`];
