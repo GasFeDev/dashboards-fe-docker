@@ -13,7 +13,7 @@ const BASE_URL = getEnvVariable(process.env.REACT_APP_ENV); */
 
 const axiosClient = axios.create({
     // En produccion
-    baseURL: "https://dashboards-be-docker.onrender.com/",
+    baseURL: process.env.URL_APP_ENV_PROD,
 
     //En local
     /* baseURL: BASE_URL, */
@@ -27,7 +27,7 @@ const axiosClient = axios.create({
 axiosClient.interceptors.response.use(
     response => {
       // Agregar encabezado 'Access-Control-Allow-Origin' a la respuesta
-      response.headers['Access-Control-Allow-Origin'] = 'https://dashboards-fe-docker.onrender.com';
+      response.headers['Access-Control-Allow-Origin'] = process.env.RENDER_APP_ENV_PROD;
       return response;
     },
     error => {
