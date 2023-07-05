@@ -1,6 +1,6 @@
-/* import axios from 'axios';
+import axios from 'axios';
 
-const getEnvVariable = (envVariableName?: string): string => {
+/* const getEnvVariable = (envVariableName?: string): string => {
     const envVariable = process.env[`REACT_APP_URL_${envVariableName}`];
     if (envVariable) {
         return envVariable;
@@ -9,14 +9,14 @@ const getEnvVariable = (envVariableName?: string): string => {
     }
 }
 
-const BASE_URL = getEnvVariable(process.env.REACT_APP_ENV);
-
+const BASE_URL = getEnvVariable(process.env.REACT_APP_ENV); */
 
 const axiosClient = axios.create({
-   
-    baseURL: process.env.RENDER_APP_ENV_PROD,
+    // En produccion
+    baseURL: "https://dashboards-be-docker.onrender.com/",
 
-
+    //En local
+    /* baseURL: BASE_URL, */
     headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
@@ -26,8 +26,8 @@ const axiosClient = axios.create({
 
 axiosClient.interceptors.response.use(
     response => {
-      
-      response.headers['Access-Control-Allow-Origin'] = process.env.RENDER_APP_ENV_PROD;
+      // Agregar encabezado 'Access-Control-Allow-Origin' a la respuesta
+      response.headers['Access-Control-Allow-Origin'] = 'https://dashboards-fe-docker.onrender.com';
       return response;
     },
     error => {
@@ -36,32 +36,4 @@ axiosClient.interceptors.response.use(
   );
 
 
-export { axiosClient } */
-
-
-
-import axios from 'axios';
-
-const baseURL = process.env.URL_APP_ENV_PROD || "https://dashboards-be-docker.onrender.com/";
-const accessControlOrigin = process.env.RENDER_APP_ENV_PROD || 'https://dashboards-fe-docker.onrender.com';
-
-const axiosClient = axios.create({
-  baseURL,
-  headers: {
-    'Content-Type': 'application/json',
-    'Accept': 'application/json',
-    'Access-Control-Allow-Origin': accessControlOrigin
-  },
-  timeout: 30000
-});
-
-axiosClient.interceptors.response.use(
-  response => {
-    return response;
-  },
-  error => {
-    return Promise.reject(error);
-  }
-);
-
-export { axiosClient };
+export { axiosClient }
