@@ -10,7 +10,6 @@ RUN npm install
 COPY . .
 
 # Build static assets
-RUN npm install path-browserify && npm run build
 RUN npm run build
 
 # STEP 2 build a small nginx image with static website test
