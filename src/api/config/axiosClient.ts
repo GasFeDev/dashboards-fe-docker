@@ -18,8 +18,8 @@ const URL = process.env.URL_APP_ENV_PROD
 
 const axiosClient = axios.create({
     // En produccion
-    /* baseURL: `https://${URL}.onrender.com/`, */
-    baseURL: "https://dashboards-be-docker.onrender.com/",
+    baseURL: `https://${URL}.onrender.com/`,
+    /* baseURL: "https://dashboards-be-docker.onrender.com/", */
     //En local
     /* baseURL: BASE_URL, */
     headers: {
@@ -34,8 +34,8 @@ const URL_ACCES_CONTROL = process.env.RENDER_APP_ENV_PROD
 axiosClient.interceptors.response.use(
     response => {
       // Agregar encabezado 'Access-Control-Allow-Origin' a la respuesta
-      /* response.headers['Access-Control-Allow-Origin'] = process.env.RENDER_APP_ENV_PROD || `https://${URL_ACCES_CONTROL}.onrender.com`; */
-      response.headers['Access-Control-Allow-Origin'] = "https://dashboards-fe-docker.onrender.com";
+      response.headers['Access-Control-Allow-Origin'] = `https://${URL_ACCES_CONTROL}.onrender.com`;
+      /* response.headers['Access-Control-Allow-Origin'] = "https://dashboards-fe-docker.onrender.com"; */
       return response;
     },
     error => {
