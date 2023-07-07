@@ -12,16 +12,20 @@ COPY . .
 # Build static assets
 RUN npm run build
 
-# STEP 2 build a small nginx image with static website test
-FROM nginx:alpine
-COPY ./nginx.conf /etc/nginx/conf.d/configfile.template
+# Install Nginx
+RUN apk add --update --no-cache nginx
 
-# Remove default nginx website
-RUN rm -rf /usr/share/nginx/html/*
+# Remove default Nginx configuration
+RUN rm /etc/nginx/conf.d/default.conf
 
-# Copy static assets to nginx image
+# Copy Nginx configuration
+COPY nginx.conf /etc/nginx/conf.d/frontend.conf
+
+# Copy static assets to Nginx HTML folder
 COPY --from=builder /app/build /usr/share/nginx/html
-ENV PORT 3000
-ENV HOST 0.0.0.0
-EXPOSE 3000
-CMD sh -c "envsubst '\$PORT' < /etc/nginx/conf.d/configfile.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
+
+# Expose Nginx port
+EXPOSE 80
+
+# Start Nginx
+CMD ["nginx", "-g", "daemon off;"]
